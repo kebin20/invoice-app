@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+
+input,
+textarea,
+select {
+  @include input-styles;
+}
+
+.form-label {
+  font-family: $font-primary;
+  font-size: $body-size;
+  color: $color-darker;
+}

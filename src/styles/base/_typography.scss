@@ -1,0 +1,47 @@
+@import 'variables';
+
+h1, .heading-l {
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: $heading-l-size;
+  line-height: $heading-l-line-height;
+  letter-spacing: $heading-l-spacing;
+}
+
+h2, .heading-m {
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: $heading-m-size;
+  line-height: $heading-m-line-height;
+  letter-spacing: $heading-m-spacing;
+}
+
+h3, .heading-s {
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: $heading-s-size;
+  line-height: $heading-s-line-height;
+  letter-spacing: $heading-s-spacing;
+}
+
+.heading-s-variant {
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: $heading-s-variant-size;
+  line-height: $heading-s-variant-line-height;
+  letter-spacing: $heading-s-variant-spacing;
+}
+
+body, p {
+  font-family: $font-secondary;
+  font-size: $body-size;
+  line-height: $body-line-height;
+  letter-spacing: $body-spacing;
+}
+
+.body-variant {
+  font-family: $font-secondary;
+  font-size: $body-variant-size;
+  line-height: $body-variant-line-height;
+  letter-spacing: $body-variant-spacing;
+}
