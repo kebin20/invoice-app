@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
       <div class="bg-dark">
-        <img src="../assets/logo.svg" alt="Logo" />
+        <Logo />
       </div>
     </a>
     <div class="d-flex gap-4">
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import Logo from '@/components/icons/Logo.vue'
 import ThemeToggleButton from '@/components/ThemeToggleButton.vue'
 
 export default {
