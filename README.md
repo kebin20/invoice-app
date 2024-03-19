@@ -84,7 +84,7 @@ const proudOfThisFunc = () => {
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Global SCSS Variables setup](https://mark-amoah.medium.com/clean-vue-3-code-with-global-scss-variables-in-vite-a-step-by-step-guide-to-organizing-your-713e7b42ba82) - This article helped me in setting up global SCSS properties so I can use the variables anywhere in the app.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 
