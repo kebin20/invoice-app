@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <div class="bg-dark">
+      <div class="logo-container">
         <Logo />
       </div>
     </a>
@@ -25,7 +25,8 @@ import ThemeToggleButton from '@/components/ThemeToggleButton.vue'
 export default {
   name: 'Navbar',
   components: {
-    ThemeToggleButton
+    ThemeToggleButton,
+    Logo
   },
   data() {
     return {
@@ -40,4 +41,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.logo-container {
+  padding: 0.5em;
+  background-color: #7c5dfa;
+}
+</style>
