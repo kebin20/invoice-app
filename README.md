@@ -1,4 +1,5 @@
 # Invoice App
+
 ![](./screenshot.jpg)
 
 ## Table of contents
@@ -62,7 +63,6 @@ Users should be able to:
 - [Bootstrap](https://getbootstrap.com/) - CSS framework
 - [Sass](https://sass-lang.com/) - For styles
 
-
 ### What I learned
 
 <!-- ```html
@@ -79,14 +79,12 @@ const proudOfThisFunc = () => {
 }
 ``` -->
 
-
 ### Continued development
 
 ### Useful resources
 
 - [Global SCSS Variables setup](https://mark-amoah.medium.com/clean-vue-3-code-with-global-scss-variables-in-vite-a-step-by-step-guide-to-organizing-your-713e7b42ba82) - This article helped me in setting up global SCSS properties so I can use the variables anywhere in the app.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [vue-svg-loader](https://vue-svg-loader.js.org/#installation) - This package was a great help in using svg files as vue components
 
 ## Author
 
@@ -95,4 +93,4 @@ const proudOfThisFunc = () => {
 
 ## Acknowledgments
 
-This is a solution to the [Invoice app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Invoice app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
