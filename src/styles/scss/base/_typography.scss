@@ -1,27 +1,24 @@
 @import 'variables';
 
-h1,
 .heading-l {
   font-family: $font-primary;
-  font-weight: bold;
+  font-weight: 700;
   font-size: $heading-l-size;
   line-height: $heading-l-line-height;
   letter-spacing: $heading-l-spacing;
 }
 
-h2,
 .heading-m {
   font-family: $font-primary;
-  font-weight: bold;
+  font-weight: 700;
   font-size: $heading-m-size;
   line-height: $heading-m-line-height;
   letter-spacing: $heading-m-spacing;
 }
 
-h3,
 .heading-s {
   font-family: $font-primary;
-  font-weight: bold;
+  font-weight: 500;
   font-size: $heading-s-size;
   line-height: $heading-s-line-height;
   letter-spacing: $heading-s-spacing;
