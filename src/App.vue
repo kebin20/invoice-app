@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <Navbar />
+    <MenuBar />
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
+import MenuBar from './components/MenuBar.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar,
+    MenuBar
+  }
 }
 </script>
 
