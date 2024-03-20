@@ -1,10 +1,10 @@
 <template>
-  <section class="d-flex m-4">
+  <section class="d-flex justify-content-between align-items-center m-4">
     <div class="d-flex flex-column">
-      <h1 class="heading-large">Invoices</h1>
+      <h1 class="heading-m text-left">Invoices</h1>
       <p>7 Invoices</p>
     </div>
-    <div class="d-flex">
+    <div class="d-flex gap-4">
       <div>Filter</div>
       <button>+ New</button>
     </div>
@@ -19,12 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  & .heading-large {
-    font-family: $font-primary;
-    font-weight: bold;
-    font-size: $heading-l-size;
-    line-height: $heading-l-line-height;
-    letter-spacing: $heading-l-spacing;
-  }
+  font-weight: 400;
 }
 </style>
