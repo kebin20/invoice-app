@@ -47,7 +47,7 @@ export default {
   background-color: $color-navbar;
 
   .logo-container {
-    background: linear-gradient(-45deg, $color-secondary 50%, $color-primary 50%);
+    background-image: radial-gradient(ellipse farthest-corner at 140% 90%, #9277ff 60%, #7c5dfa 0%);
     width: 72px;
     height: 72px;
     border-top-right-radius: 20px;
