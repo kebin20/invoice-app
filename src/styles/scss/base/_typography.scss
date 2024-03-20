@@ -1,6 +1,7 @@
 @import 'variables';
 
-h1, .heading-l {
+h1,
+.heading-l {
   font-family: $font-primary;
   font-weight: bold;
   font-size: $heading-l-size;
@@ -8,7 +9,8 @@ h1, .heading-l {
   letter-spacing: $heading-l-spacing;
 }
 
-h2, .heading-m {
+h2,
+.heading-m {
   font-family: $font-primary;
   font-weight: bold;
   font-size: $heading-m-size;
@@ -16,7 +18,8 @@ h2, .heading-m {
   letter-spacing: $heading-m-spacing;
 }
 
-h3, .heading-s {
+h3,
+.heading-s {
   font-family: $font-primary;
   font-weight: bold;
   font-size: $heading-s-size;
@@ -32,15 +35,16 @@ h3, .heading-s {
   letter-spacing: $heading-s-variant-spacing;
 }
 
-body, p {
-  font-family: $font-secondary;
+body,
+p {
+  font-family: $font-primary;
   font-size: $body-size;
   line-height: $body-line-height;
   letter-spacing: $body-spacing;
 }
 
 .body-variant {
-  font-family: $font-secondary;
+  font-family: $font-primary;
   font-size: $body-variant-size;
   line-height: $body-variant-line-height;
   letter-spacing: $body-variant-spacing;
