@@ -1,15 +1,16 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <div class="logo-container">
+  <nav class="c-nav d-flex justify-content-between">
+    <a class="" href="#">
+      <div class="logo-container d-flex align-items-center justify-content-center center-container">
         <Logo />
       </div>
     </a>
-    <div class="d-flex gap-4">
+    <div class="d-flex align-items-center">
       <ThemeToggleButton :mode="themeMode" @toggle-theme="toggleTheme" />
+      <div class="custom-vertical-line"></div>
       <img
         src="../assets/image-avatar.jpg"
-        class="rounded-circle"
+        class="rounded-circle m-3 mx-4"
         width="30"
         height="30"
         alt="User Profile"
@@ -42,8 +43,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo-container {
-  padding: 0.5em;
-  background-color: #7c5dfa;
+.c-nav {
+  background-color: $color-navbar;
+
+  .logo-container {
+    background: linear-gradient(-45deg, $color-secondary 50%, $color-primary 50%);
+    width: 72px;
+    height: 72px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .custom-vertical-line {
+    width: 1px;
+    background-color: #494e6e;
+    height: 100%;
+    display: block;
+  }
 }
 </style>
