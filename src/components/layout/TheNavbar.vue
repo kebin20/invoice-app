@@ -1,22 +1,26 @@
 <template>
-  <nav class="c-nav d-flex justify-content-between">
-    <a class="" href="#">
-      <div class="logo-container d-flex align-items-center justify-content-center center-container">
-        <Logo />
+  <header>
+    <nav class="c-nav d-flex justify-content-between">
+      <a class="" href="#">
+        <div
+          class="logo-container d-flex align-items-center justify-content-center center-container"
+        >
+          <Logo />
+        </div>
+      </a>
+      <div class="d-flex align-items-center">
+        <ThemeToggleButton :mode="themeMode" @toggle-theme="toggleTheme" />
+        <div class="custom-vertical-line"></div>
+        <img
+          src="../assets/image-avatar.jpg"
+          class="rounded-circle m-3 mx-4"
+          width="30"
+          height="30"
+          alt="User Profile"
+        />
       </div>
-    </a>
-    <div class="d-flex align-items-center">
-      <ThemeToggleButton :mode="themeMode" @toggle-theme="toggleTheme" />
-      <div class="custom-vertical-line"></div>
-      <img
-        src="../assets/image-avatar.jpg"
-        class="rounded-circle m-3 mx-4"
-        width="30"
-        height="30"
-        alt="User Profile"
-      />
-    </div>
-  </nav>
+    </nav>
+  </header>
 </template>
 
 <script>
