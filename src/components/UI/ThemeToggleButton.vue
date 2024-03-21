@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DarkModeIcon from './icons/DarkModeIcon.vue'
+import DarkModeIcon from '@/components/icons/DarkModeIcon.vue'
 // import LightModeIcon from './icons/LightModeIcon.vue'
 
 export default {

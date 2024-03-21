@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Navbar />
+    <TheNavbar />
     <MenuBar />
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import TheNavbar from './components/layout/TheNavbar.vue'
 import MenuBar from './components/MenuBar.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
+    TheNavbar,
     MenuBar
   }
 }

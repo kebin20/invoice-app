@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import NewInvoiceButton from './NewInvoiceButton.vue'
+import NewInvoiceButton from '@/components/UI/NewInvoiceButton.vue'
 import ArrowDownIcon from './icons/ArrowDownIcon.vue'
 
 export default {

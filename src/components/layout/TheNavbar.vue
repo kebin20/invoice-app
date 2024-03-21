@@ -21,7 +21,7 @@
 
 <script>
 import Logo from '@/components/icons/Logo.vue'
-import ThemeToggleButton from '@/components/ThemeToggleButton.vue'
+import ThemeToggleButton from '@/components/UI/ThemeToggleButton.vue'
 
 export default {
   name: 'Navbar',
