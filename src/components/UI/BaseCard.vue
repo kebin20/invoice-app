@@ -4,11 +4,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BaseCard'
-}
-</script>
+<script></script>
 
 <style scoped>
 div {
