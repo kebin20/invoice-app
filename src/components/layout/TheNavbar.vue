@@ -12,7 +12,7 @@
         <ThemeToggleButton :mode="themeMode" @toggle-theme="toggleTheme" />
         <div class="custom-vertical-line"></div>
         <img
-          src="../assets/image-avatar.jpg"
+          src="../../assets/image-avatar.jpg"
           class="rounded-circle m-3 mx-4"
           width="30"
           height="30"
@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .c-nav {
-  background-color: $color-navbar;
+  background-color: $color-black;
 
   .logo-container {
     background-image: radial-gradient(ellipse farthest-corner at 140% 90%, #9277ff 60%, #7c5dfa 0%);
