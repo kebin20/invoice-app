@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-flex flex-column bg-white mb-3 mx-auto rounded-3 p-4">
     <slot></slot>
   </div>
 </template>
@@ -8,10 +8,6 @@
 
 <style scoped>
 div {
-  background-color: white;
-  margin: 1rem auto;
-  max-width: 20rem;
-  border-radius: 2px;
-  margin: 1rem;
+  max-width: 30rem;
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
-  <ul>
-    <InvoiceCard :invoices="invoices" />
-  </ul>
+  <section class="d-flex flex-column align-items-center">
+    <ul class="p-0 mx-5">
+      <InvoiceCard :invoices="invoices" />
+    </ul>
+  </section>
 </template>
 
 <script>
