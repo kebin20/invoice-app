@@ -10,11 +10,11 @@
           <p class="color-blue text-nowrap">Due {{ formatDate(invoice.paymentDue) }}</p>
           <p class="font-weight-bold mb-0">{{ formatCurrency(invoice.total) }}</p>
         </div>
-        <!-- <ul class="font-weight-bold p-0">
+        <ul class="font-weight-bold p-0">
           <li :class="['invoice-status', invoiceStatusClass(invoice.status)]">
             {{ capitalizeStatus(invoice.status) }}
           </li>
-        </ul> -->
+        </ul>
       </div>
     </BaseCard>
   </li>
@@ -34,27 +34,27 @@ export default {
       required: true
     }
   },
-  // computed: {
-  //   invoiceStatusClass() {
-  //     return function (status) {
-  //       let statusClass
-  //       switch (status) {
-  //         case 'paid':
-  //           statusClass = '-paid'
-  //           break
-  //         case 'pending':
-  //           statusClass = '-pending'
-  //           break
-  //         case 'draft':
-  //           statusClass = '-draft'
-  //           break
-  //         default:
-  //           statusClass = ''
-  //       }
-  //       return 'invoice-status' + statusClass
-  //     }
-  //   }
-  // },
+  computed: {
+    invoiceStatusClass() {
+      return function (status) {
+        let statusClass
+        switch (status) {
+          case 'paid':
+            statusClass = '-paid'
+            break
+          case 'pending':
+            statusClass = '-pending'
+            break
+          case 'draft':
+            statusClass = '-draft'
+            break
+          default:
+            statusClass = ''
+        }
+        return 'invoice-status' + statusClass
+      }
+    }
+  },
   methods: {
     formatDate(dateString) {
       const options = { day: '2-digit', month: 'short', year: 'numeric' }
