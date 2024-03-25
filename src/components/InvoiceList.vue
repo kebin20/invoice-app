@@ -24,7 +24,9 @@ export default {
   },
   data() {
     return {
-      invoices: INVOICE_DATA
+      invoices: INVOICE_DATA,
+      isLoading: false,
+      error: null
     }
   },
   computed: {
