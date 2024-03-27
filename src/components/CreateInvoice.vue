@@ -19,6 +19,7 @@
         <label for="country">Country</label>
         <input type="text" id="country" name="country" v-model.trim="country" />
       </div>
+
       <h2>Bill To</h2>
       <div class="form-control">
         <label for="name">Client's Name</label>
@@ -80,6 +81,11 @@
         </div>
         <button>Trash</button>
       </section>
+      <p v-if="invalidInput">
+        One or more input fields are invalid. Please check that you have provided the correct
+        information
+      </p>
+      <p v-if="invalidInput">{{ error }}</p>
     </form>
   </section>
 </template>
@@ -91,7 +97,20 @@ export default {
   data() {
     return {
       error: null,
-      newInvoice: {}
+      invalidInput: false,
+      newInvoice: [
+        {
+          clientName: this.clientName,
+          description: this.description,
+          paymentDue: this.paymentDue,
+          senderAddress: {
+            clientStreet: this.clientStreet,
+            clientCity: this.clientCity,
+            clientPostCode: this.clientPostCode,
+            clientCountry: this.clientCountry
+          }
+        }
+      ]
     }
   },
   methods: {
