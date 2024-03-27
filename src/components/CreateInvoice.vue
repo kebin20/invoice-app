@@ -48,11 +48,11 @@
       </div>
       <div class="form-control">
         <label for="invoice-date">Invoice Date</label>
-        <input type="date" name="invoice-date" id="invoice-date" v-model="paymentDue" />
+        <input type="date" name="invoice-date" id="invoice-date" v-model="invoiceDate" />
       </div>
       <div class="form-control">
         <label for="payment-terms">Payment Terms</label>
-        <select name="payment-terms" id="payment-terms">
+        <select name="payment-terms" id="payment-terms" v-model="paymentTerms">
           <option value="30">Net 30 Days</option>
         </select>
       </div>
@@ -69,23 +69,24 @@
         </div>
         <div class="form-control">
           <label for="quantity">Qty.</label>
-          <input type="number" id="quantity" name="quantity" v-model="quantity" />
+          <input type="number" id="quantity" name="quantity" v-model="itemQuantity" />
         </div>
         <div class="form-control">
           <label for="price">Price</label>
-          <input type="number" id="price" name="price" v-model="price" />
+          <input type="number" id="price" name="price" v-model="itemPrice" />
         </div>
         <div class="form-control">
           <label for="total">Total</label>
-          <input type="number" id="total" name="total" v-model="total" />
+          <input type="number" id="total" name="total" v-model="itemTotal" />
         </div>
-        <button>Trash</button>
+        <button type="button" @click="addItemToList">Add Item</button>
+        <button type="button" @click="removeItemFromList">Remove Item</button>
       </section>
       <p v-if="invalidInput">
         One or more input fields are invalid. Please check that you have provided the correct
         information
       </p>
-      <p v-if="invalidInput">{{ error }}</p>
+      <p v-if="error">{{ error }}</p>
     </form>
   </section>
 </template>
@@ -98,41 +99,60 @@ export default {
     return {
       error: null,
       invalidInput: false,
-      newInvoice: [
-        {
-          clientName: this.clientName,
-          description: this.description,
-          paymentDue: this.paymentDue,
-          senderAddress: {
-            clientStreet: this.clientStreet,
-            clientCity: this.clientCity,
-            clientPostCode: this.clientPostCode,
-            clientCountry: this.clientCountry
-          }
-        }
-      ]
+      street: '',
+      city: '',
+      postCode: '',
+      country: '',
+      clientName: '',
+      clientStreet: '',
+      clientCity: '',
+      clientPostCode: '',
+      clientCountry: '',
+      invoiceDate: '',
+      paymentTerms: '30',
+      description: '',
+      itemList: []
     }
   },
   methods: {
     submitInvoice() {
       this.error = null
+      const newInvoice = {
+        clientName: this.clientName,
+        description: this.description,
+        paymentDue: this.invoiceDate,
+        senderAddress: {
+          clientStreet: this.clientStreet,
+          clientCity: this.clientCity,
+          clientPostCode: this.clientPostCode,
+          clientCountry: this.clientCountry
+        },
+        itemList: this.itemList
+      }
+
       axios
         .post('https://invoice-app-b19cf-default-rtdb.asia-southeast1.firebasedatabase.app/', {
-          newInvoice: this.newInvoice
+          newInvoice
         })
-        .then((response) => {
-          if (response.ok) {
-            alert('Invoice created!')
-          } else {
-            throw new Error('Could not save invoice!')
-          }
+        .then(() => {
+          alert('Invoice created!')
         })
         .catch((error) => {
           alert(error)
           this.error = error.message
         })
-
-      this.newInvoice = {}
+    },
+    addItemToList() {
+      const newItem = {
+        name: this.itemName,
+        quantity: this.itemQuantity,
+        price: this.itemPrice,
+        total: this.itemTotal
+      }
+      this.itemList.push(newItem)
+    },
+    removeItemFromList(index) {
+      this.itemList.splice(index, 1)
     }
   }
 }
