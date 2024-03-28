@@ -79,14 +79,19 @@
           <label for="total">Total</label>
           <input type="number" id="total" name="total" v-model="itemTotal" />
         </div>
-        <button type="button" @click="addItemToList">Add Item</button>
         <button type="button" @click="removeItemFromList">Remove Item</button>
       </section>
+      <button type="button" @click="addItemToList">Add Item</button>
       <p v-if="invalidInput">
         One or more input fields are invalid. Please check that you have provided the correct
         information
       </p>
       <p v-if="error">{{ error }}</p>
+      <div class="form-buttons">
+        <button>Discard</button>
+        <button>Save as Draft</button>
+        <button>Save & Send</button>
+      </div>
     </form>
   </section>
 </template>
