@@ -15,17 +15,29 @@
 
 <script>
 import InvoiceCard from './InvoiceCard.vue'
-import INVOICE_DATA from '../../data.json'
+import axios from 'axios'
 
 export default {
   name: 'Invoice List',
   components: {
     InvoiceCard
   },
+  created() {
+    axios
+      .get('https://invoice-app-b19cf-default-rtdb.asia-southeast1.firebasedatabase.app/')
+      .then((response) => {
+        this.invoices = response.data
+        this.isLoading = false
+      })
+      .catch((error) => {
+        alert('Unable to obtain invoice data', error)
+        this.isLoading = false
+      })
+  },
   data() {
     return {
-      invoices: INVOICE_DATA,
-      isLoading: false,
+      invoices: [],
+      isLoading: true,
       error: null
     }
   },
