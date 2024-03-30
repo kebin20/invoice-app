@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import router from './router.js'
+
 import './styles/main.css'
 
 import App from './App.vue'
@@ -10,9 +11,9 @@ import BaseModal from './components/UI/BaseModal.vue'
 
 const app = createApp(App)
 
-app.use(createPinia())
-
 app.component('BaseCard', BaseCard)
 app.component('BaseModal', BaseModal)
+
+app.use(router)
 
 app.mount('#app')
