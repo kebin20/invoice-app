@@ -100,6 +100,7 @@
 import axios from 'axios'
 
 export default {
+  name: 'CreateInvoice',
   data() {
     return {
       error: null,

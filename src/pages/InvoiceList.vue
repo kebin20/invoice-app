@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import InvoiceCard from './InvoiceCard.vue'
+import InvoiceCard from '../components/InvoiceCard.vue'
 import axios from 'axios'
 
 export default {
-  name: 'Invoice List',
+  name: 'InvoiceList',
   components: {
     InvoiceCard
   },

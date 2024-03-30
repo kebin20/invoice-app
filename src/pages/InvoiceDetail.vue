@@ -16,5 +16,9 @@
 </template>
 
 <script>
-import InvoiceStatus from './UI/InvoiceStatus.vue'
+import InvoiceStatus from '../components/UI/InvoiceStatus.vue'
+
+export default {
+  name: 'InvoiceDetail'
+}
 </script>
