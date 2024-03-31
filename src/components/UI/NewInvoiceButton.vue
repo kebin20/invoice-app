@@ -1,15 +1,16 @@
 <template>
-  <button class="toggle-button">
+  <router-link class="toggle-button" to="/create-invoice">
     <span class="slider">
       <span class="slider-text">New</span>
       <span class="plus-icon">+</span>
     </span>
-  </button>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: 'NewInvoiceButton'
+  name: 'NewInvoiceButton',
+  methods: {}
 }
 </script>
 

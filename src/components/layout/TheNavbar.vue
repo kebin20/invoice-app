@@ -1,13 +1,13 @@
 <template>
   <header>
     <nav class="c-nav d-flex justify-content-between">
-      <a class="" href="#">
+      <router-link to="/">
         <div
           class="logo-container d-flex align-items-center justify-content-center center-container"
         >
           <Logo />
         </div>
-      </a>
+      </router-link>
       <div class="d-flex align-items-center">
         <ThemeToggleButton :mode="themeMode" @toggle-theme="toggleTheme" />
         <div class="custom-vertical-line"></div>
