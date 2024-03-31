@@ -8,8 +8,8 @@
 
 <script>
 import TheNavbar from './components/layout/TheNavbar.vue'
-import TheMenuBar from './components/TheMenuBar.vue'
-import InvoiceList from './components/InvoiceList.vue'
+import TheMenuBar from './components/layout/TheMenuBar.vue'
+import InvoiceList from './pages/InvoiceList.vue'
 
 export default {
   name: 'App',

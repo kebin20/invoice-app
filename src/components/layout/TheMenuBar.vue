@@ -16,7 +16,7 @@
 
 <script>
 import NewInvoiceButton from '@/components/UI/NewInvoiceButton.vue'
-import ArrowDownIcon from './icons/ArrowDownIcon.vue'
+import ArrowDownIcon from '@/components/icons/ArrowDownIcon.vue'
 
 export default {
   name: 'TheMenuBar',
