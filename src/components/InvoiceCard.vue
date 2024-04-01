@@ -39,9 +39,6 @@ export default {
     },
     formatCurrency(amount) {
       return amount.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })
-    },
-    capitalizeStatus(status) {
-      return status.charAt(0).toUpperCase() + status.slice(1)
     }
   }
 }

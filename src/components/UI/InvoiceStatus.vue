@@ -35,6 +35,11 @@ export default {
         return 'invoice-status' + statusClass
       }
     }
+  },
+  methods: {
+    capitalizeStatus(status) {
+      return status.charAt(0).toUpperCase() + status.slice(1)
+    }
   }
 }
 </script>
