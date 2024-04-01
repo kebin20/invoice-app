@@ -1,9 +1,9 @@
 <template>
   <section class="d-flex flex-column align-items-center">
-    <ul class="p-0 mx-5" v-if="invoicesAvailable">
-      <InvoiceCard :invoices="invoices" />
+    <ul class="p-0 mx-5" v-if="invoicesAvailable && !isLoading">
+      <InvoiceCard :invoices="INVOICE_DATA" />
     </ul>
-    <div class="d-flex flex-column align-items-center text-center mt-5">
+    <div v-else class="d-flex flex-column align-items-center text-center mt-5">
       <img src="../assets/illustration-empty.svg" alt="No invoices" />
       <div class="p-5">
         <h1>There's nothing here</h1>
@@ -15,6 +15,7 @@
 
 <script>
 import InvoiceCard from '../components/InvoiceCard.vue'
+import INVOICE_DATA from '../../data.json'
 import axios from 'axios'
 
 export default {
@@ -27,15 +28,18 @@ export default {
       .get('https://invoice-app-b19cf-default-rtdb.asia-southeast1.firebasedatabase.app/')
       .then((response) => {
         this.invoices = response.data
+        console.log(response.data)
         this.isLoading = false
       })
       .catch((error) => {
-        alert('Unable to obtain invoice data', error)
+        console.error('Error fetching invoices:', error)
+        this.error = 'Error fetching invoices.'
         this.isLoading = false
       })
   },
   data() {
     return {
+      INVOICE_DATA: INVOICE_DATA,
       invoices: [],
       isLoading: true,
       error: null
