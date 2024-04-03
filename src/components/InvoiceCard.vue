@@ -1,7 +1,7 @@
 <template>
   <li v-for="invoice of invoices" :key="invoice.id">
     <BaseCard>
-      <router-link to="/invoices/RT3080">
+      <router-link class="router-link-class" to="/invoices/RT3080">
         <header class="client-container d-flex justify-content-between mb-3">
           <p class="font-weight-bold">#{{ invoice.id }}</p>
           <p class="color-blue">{{ invoice.clientName }}</p>
@@ -56,5 +56,10 @@ export default {
 }
 .status-container {
   gap: 5em;
+}
+
+.router-link-class {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
