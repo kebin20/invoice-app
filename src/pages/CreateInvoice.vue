@@ -117,7 +117,7 @@ export default {
       invoiceDate: '',
       paymentTerms: '30',
       description: '',
-      itemList: []
+      itemList: [{ itemName: '', itemQuantity: '', itemPrice: '', itemTotal: '' }]
     }
   },
   methods: {
