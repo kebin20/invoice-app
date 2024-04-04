@@ -1,10 +1,19 @@
 <template>
-  <div class="d-flex flex-column bg-white mb-3 mx-auto rounded-3 p-4">
+  <div :class="`d-flex bg-white mb-3 mx-auto rounded-3 p-4 ${className}`">
     <slot></slot>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    className: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
 
 <style scoped>
 div {

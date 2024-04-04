@@ -1,7 +1,7 @@
 <template>
   <ul class="font-weight-bold p-0">
-    <li :class="['invoice-status', invoiceStatusClass(status)]">
-      {{ capitalizeStatus(status) }}
+    <li :class="['invoice-status', status ? invoiceStatusClass(status) : 'status']">
+      {{ !status ? 'status' : capitalizeStatus(status) }}
     </li>
   </ul>
 </template>

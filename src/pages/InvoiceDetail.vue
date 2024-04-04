@@ -1,6 +1,6 @@
 <template>
-  <a href="">Go back</a>
-  <BaseCard>
+  <router-link to="/" class="custom-link">Go back</router-link>
+  <BaseCard className="flex-row justify-content-between">
     <h1>Status</h1>
     <InvoiceStatus />
   </BaseCard>
@@ -19,6 +19,9 @@
 import InvoiceStatus from '../components/UI/InvoiceStatus.vue'
 
 export default {
-  name: 'InvoiceDetail'
+  name: 'InvoiceDetail',
+  components: {
+    InvoiceStatus
+  }
 }
 </script>
