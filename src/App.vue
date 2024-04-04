@@ -19,4 +19,19 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss">
+html,
+body,
+section {
+  background-color: #f8f8fb;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+.custom-link {
+  text-decoration: none;
+}
+</style>
