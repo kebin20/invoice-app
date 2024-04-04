@@ -40,8 +40,8 @@ export default {
     }
     .plus-icon {
       position: absolute;
-      top: 45%;
-      right: 65%;
+      top:57%;
+      right: 67%;
       transform: translateY(-50%);
       color: $color-primary;
       font-size: 1.5rem;
