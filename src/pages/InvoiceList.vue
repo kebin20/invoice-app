@@ -1,5 +1,6 @@
 <template>
   <section class="d-flex flex-column align-items-center">
+    <TheMenuBar />
     <ul class="p-0 mx-5" v-if="!isLoading">
       <InvoiceCard :invoices="INVOICE_DATA" />
     </ul>
@@ -15,13 +16,15 @@
 
 <script>
 import InvoiceCard from '../components/InvoiceCard.vue'
+import TheMenuBar from '../components/layout/TheMenuBar.vue'
 import INVOICE_DATA from '../../data.json'
 import axios from 'axios'
 
 export default {
   name: 'InvoiceList',
   components: {
-    InvoiceCard
+    InvoiceCard,
+    TheMenuBar
   },
   created() {
     axios
