@@ -30,6 +30,8 @@ export default {
 <style lang="scss" scoped>
 section {
   margin: 2em 1.5em;
+  gap: 6em;
+
   .filter {
     font-weight: 700;
     &-text {
