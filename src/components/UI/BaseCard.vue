@@ -1,6 +1,8 @@
 <template>
   <div :class="`d-flex bg-white mb-3 mx-auto rounded-3 p-4 ${className}`">
+    <slot name="header"></slot>
     <slot></slot>
+    <slot name="footer"></slot>
   </div>
 </template>
 
