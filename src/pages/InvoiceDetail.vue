@@ -1,7 +1,7 @@
 <template>
   <router-link to="/" class="custom-link">Go back</router-link>
   <BaseCard className="flex-row justify-content-between">
-    <h1>Status</h1>
+    <h1 class="p-0">Status</h1>
     <InvoiceStatus />
   </BaseCard>
   <section>
@@ -72,3 +72,6 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+</style>
