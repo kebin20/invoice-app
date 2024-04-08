@@ -1,7 +1,9 @@
 <template>
-  <router-link to="/" class="custom-link">Go back</router-link>
-  <BaseCard className="flex-row justify-content-between">
-    <h1 class="p-0">Status</h1>
+  <header class="link-header m-4">
+    <router-link class="custom-link" to="/">Go back</router-link>
+  </header>
+  <BaseCard className="flex-row justify-content-between align-items-center">
+    <p class="m-0">Status</p>
     <InvoiceStatus />
   </BaseCard>
   <section>
@@ -74,4 +76,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.link-header {
+  padding-left: 10em;
+
+  .custom-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+}
 </style>
