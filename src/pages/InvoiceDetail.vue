@@ -1,14 +1,14 @@
 <template>
-  <header class="link-header m-4">
+  <header class="link-header my-4">
     <router-link class="custom-link" to="/">Go back</router-link>
   </header>
   <BaseCard className="flex-row justify-content-between align-items-center">
-    <p class="m-0">Status</p>
+    <p class="m-0 color-gray-light">Status</p>
     <InvoiceStatus />
   </BaseCard>
   <section>
-    <BaseCard>
-      <header class="client-container d-flex justify-content-between mb-3">
+    <BaseCard className="flex-column">
+      <header class="d-flex flex-column">
         <h2 class="font-weight-bold">#XM9141</h2>
         <p>Graphic Design</p>
       </header>
@@ -18,20 +18,20 @@
           London <br />E1 3EZ <br />United Kingdom
         </p>
         <div>
-          <h3>Invoice Data</h3>
+          <p>Invoice Date</p>
           <p>21 Aug 2021</p>
         </div>
         <div>
-          <h3>Payment Due</h3>
+          <p>Payment Due</p>
           <p>20 Sep 2021</p>
         </div>
         <div>
-          <h3>Bill To</h3>
+          <p>Bill To</p>
           <p>Alex Grim</p>
           <p>84 Church Way <br />Bradford <br />BD1 9PB<br />United Kingdom</p>
         </div>
         <div>
-          <h3>Sent to</h3>
+          <p>Sent to</p>
           <p>alexgrim@mail.com</p>
         </div>
       </main>
@@ -77,12 +77,17 @@ export default {
 
 <style lang="scss" scoped>
 .link-header {
-  padding-left: 10em;
-
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
   .custom-link {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
   }
+}
+
+p {
+  color: $color-gray-light;
 }
 </style>
