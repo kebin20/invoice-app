@@ -9,7 +9,7 @@
   <section>
     <BaseCard className="flex-column">
       <header class="d-flex flex-column">
-        <h2 class="font-weight-bold">#XM9141</h2>
+        <h2 class="font-weight-bold body-variant">#XM9141</h2>
         <p>Graphic Design</p>
       </header>
       <main>
@@ -18,42 +18,44 @@
           London <br />E1 3EZ <br />United Kingdom
         </p>
         <div>
-          <p>Invoice Date</p>
-          <p>21 Aug 2021</p>
-        </div>
-        <div>
-          <p>Payment Due</p>
-          <p>20 Sep 2021</p>
-        </div>
-        <div>
-          <p>Bill To</p>
-          <p>Alex Grim</p>
-          <p>84 Church Way <br />Bradford <br />BD1 9PB<br />United Kingdom</p>
+          <div>
+            <p>Invoice Date</p>
+            <p class="font-weight-bold color-dark-black">21 Aug 2021</p>
+          </div>
+          <div>
+            <p>Payment Due</p>
+            <p class="font-weight-bold color-dark-black">20 Sep 2021</p>
+          </div>
+          <div>
+            <p>Bill To</p>
+            <p class="font-weight-bold color-dark-black">Alex Grim</p>
+            <p>84 Church Way <br />Bradford <br />BD1 9PB<br />United Kingdom</p>
+          </div>
         </div>
         <div>
           <p>Sent to</p>
-          <p>alexgrim@mail.com</p>
+          <p class="font-weight-bold color-dark-black">alexgrim@mail.com</p>
         </div>
       </main>
       <template v-slot:footer>
-        <div class="modal-footer">
-          <div>
+        <div class="modal-footer d-flex flex-column bg-color-gray">
+          <div class="d-flex gap-5">
             <div>
-              <p>Banner Design</p>
+              <p class="font-weight-bold color-dark-black">Banner Design</p>
               <p>1 x $ 156.00</p>
             </div>
-            <p>$156.00</p>
+            <p class="font-weight-bold color-dark-black">$156.00</p>
           </div>
-          <div>
+          <div class="d-flex gap-5">
             <div>
-              <p>Email Design</p>
+              <p class="font-weight-bold color-dark-black">Email Design</p>
               <p>2 x $ 200.00</p>
             </div>
-            <p>$400.00</p>
+            <p class="font-weight-bold color-dark-black">$400.00</p>
           </div>
-          <div>
-            <p>Grand Total</p>
-            <p>$556.00</p>
+          <div class="d-flex gap-5 bg-color-black">
+            <p class="text-white">Grand Total</p>
+            <p class="text-white font-weight-bold">$556.00</p>
           </div>
         </div>
       </template>
