@@ -14,6 +14,14 @@
   color: $color-darker;
 }
 
+.color-dark-black {
+  color: $color-dark-black;
+}
+
+.color-black {
+  color: $color-black;
+}
+
 .color-light {
   color: $color-light;
 }
@@ -24,10 +32,6 @@
 
 .color-blue {
   color: $color-blue;
-}
-
-.color-black {
-  color: $color-black;
 }
 
 .color-error {
@@ -47,6 +51,10 @@
   background-color: $color-dark-bg;
 }
 
-.color-black {
+.bg-color-black {
   background-color: $color-black;
+}
+
+.bg-color-gray {
+  background-color: $color-gray-light;
 }
