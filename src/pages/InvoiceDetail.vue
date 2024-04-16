@@ -38,22 +38,22 @@
         </div>
       </main>
       <template v-slot:footer>
-        <div class="modal-footer d-flex flex-column bg-color-gray">
-          <div class="d-flex gap-5">
+        <div class="rounded-top rounded-8 mx-auto d-flex flex-column bg-color-gray-lighter">
+          <div class="d-flex gap-5 p-4">
             <div>
               <p class="font-weight-bold color-dark-black">Banner Design</p>
               <p>1 x $ 156.00</p>
             </div>
             <p class="font-weight-bold color-dark-black">$156.00</p>
           </div>
-          <div class="d-flex gap-5">
+          <div class="d-flex gap-5 p-4">
             <div>
               <p class="font-weight-bold color-dark-black">Email Design</p>
               <p>2 x $ 200.00</p>
             </div>
             <p class="font-weight-bold color-dark-black">$400.00</p>
           </div>
-          <div class="d-flex gap-5 bg-color-black">
+          <div class="rounded-bottom rounded-8 d-flex w-100 gap-5 bg-color-black p-3">
             <p class="text-white">Grand Total</p>
             <p class="text-white font-weight-bold">$556.00</p>
           </div>
