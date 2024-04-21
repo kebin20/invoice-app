@@ -43,11 +43,15 @@
 }
 
 // Background colors
-.color-light-bg {
+.bg-color-primary {
+  background-color: $color-primary;
+}
+
+.bg-color-light {
   background-color: $color-light-bg;
 }
 
-.color-dark-bg {
+.bg-color-dark {
   background-color: $color-dark-bg;
 }
 
@@ -61,4 +65,8 @@
 
 .bg-color-gray-lighter {
   background-color: $color-gray-lighter;
+}
+
+.bg-color-error {
+  background-color: $color-error;
 }

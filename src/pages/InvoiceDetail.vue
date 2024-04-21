@@ -1,5 +1,5 @@
 <template>
-  <header class="link-header my-4">
+  <header class="link-header m-4">
     <router-link class="custom-link" to="/">Go back</router-link>
   </header>
   <BaseCard className="flex-row justify-content-between align-items-center mx-3">
@@ -56,7 +56,7 @@
             <p class="font-weight-bold color-dark-black">$400.00</p>
           </div>
           <div
-            class="d-flex justify-content-between w-100 gap-5 bg-color-black rounded-bottom rounded-8 p-3"
+            class="d-flex justify-content-between align-items-center w-100 gap-5 bg-color-black rounded-bottom rounded-8 p-3 py-4"
           >
             <p class="text-white mb-0">Grand Total</p>
             <p class="text-white heading-m font-weight-bold mb-0">$556.00</p>
@@ -64,8 +64,8 @@
         </div>
       </template>
     </BaseCard>
-    <TheButtonBar />
   </section>
+  <TheButtonBar />
 </template>
 
 <script>
