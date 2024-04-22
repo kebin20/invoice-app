@@ -1,5 +1,8 @@
 <template>
-  <header class="link-header m-4">
+  <header class="link-header d-flex gap-4 m-4">
+    <router-link to="/">
+      <ArrowLeftIcon />
+    </router-link>
     <router-link class="custom-link" to="/">Go back</router-link>
   </header>
   <BaseCard className="flex-row justify-content-between align-items-center mx-3">
@@ -13,7 +16,7 @@
         <p>Graphic Design</p>
       </header>
       <main>
-        <p>
+        <p class="lh-base">
           19 Union Terrace<br />
           London <br />E1 3EZ <br />United Kingdom
         </p>
@@ -31,7 +34,7 @@
           <div>
             <p>Bill To</p>
             <p class="font-weight-bold color-dark-black">Alex Grim</p>
-            <p>84 Church Way <br />Bradford <br />BD1 9PB<br />United Kingdom</p>
+            <p class="lh-base">84 Church Way <br />Bradford <br />BD1 9PB<br />United Kingdom</p>
           </div>
         </div>
         <div>
@@ -71,12 +74,14 @@
 <script>
 import InvoiceStatus from '../components/UI/InvoiceStatus.vue'
 import TheButtonBar from '../components/layout/TheButtonBar.vue'
+import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
 
 export default {
   name: 'InvoiceDetail',
   components: {
     InvoiceStatus,
-    TheButtonBar
+    TheButtonBar,
+    ArrowLeftIcon
   }
 }
 </script>
