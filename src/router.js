@@ -11,12 +11,12 @@ const router = createRouter({
   routes: [
     { path: '/', redirect: '/invoices' },
     { path: '/invoices', component: InvoiceList },
+    { path: '/invoices/new', component: CreateInvoice },
     {
       path: '/invoices/:id',
       component: InvoiceDetail,
       children: [{ path: 'edit', component: EditInvoice }]
     },
-    { path: '/create-invoice', component: CreateInvoice },
     { path: '/:notFound(.*)', component: NotFound }
   ]
 })
