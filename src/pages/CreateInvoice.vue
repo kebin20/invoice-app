@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mx-3">
     <BaseHeader />
     <h1>New invoice</h1>
     <InvoiceForm />

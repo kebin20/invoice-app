@@ -1,5 +1,5 @@
 <template>
-  <header class="link-header d-flex gap-4 m-4">
+  <header class="link-header d-flex gap-4 mx-1 my-4">
     <router-link to="/">
       <ArrowLeftIcon />
     </router-link>
