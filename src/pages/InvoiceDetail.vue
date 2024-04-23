@@ -1,10 +1,5 @@
 <template>
-  <header class="link-header d-flex gap-4 m-4">
-    <router-link to="/">
-      <ArrowLeftIcon />
-    </router-link>
-    <router-link class="custom-link" to="/">Go back</router-link>
-  </header>
+  <BaseHeader />
   <BaseCard className="flex-row justify-content-between align-items-center mx-3">
     <p class="m-0 color-gray-light">Status</p>
     <InvoiceStatus />
@@ -72,16 +67,16 @@
 </template>
 
 <script>
-import InvoiceStatus from '../components/UI/InvoiceStatus.vue'
-import TheButtonBar from '../components/layout/TheButtonBar.vue'
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue'
+import InvoiceStatus from '@/components/UI/InvoiceStatus.vue'
+import TheButtonBar from '@/components/layout/TheButtonBar.vue'
+import BaseHeader from '@/components/UI/BaseHeader.vue'
 
 export default {
   name: 'InvoiceDetail',
   components: {
     InvoiceStatus,
     TheButtonBar,
-    ArrowLeftIcon
+    BaseHeader
   }
 }
 </script>
