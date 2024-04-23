@@ -1,5 +1,5 @@
 <template>
-  <router-link class="toggle-button" to="/create-invoice">
+  <router-link class="toggle-button" to="/invoices/new">
     <span class="slider">
       <span class="slider-text">New</span>
       <span class="plus-icon">+</span>
@@ -40,7 +40,7 @@ export default {
     }
     .plus-icon {
       position: absolute;
-      top:57%;
+      top: 57%;
       right: 67%;
       transform: translateY(-50%);
       color: $color-primary;
