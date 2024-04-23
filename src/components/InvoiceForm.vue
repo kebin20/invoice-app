@@ -1,7 +1,7 @@
 <template>
   <section>
     <form @submit.prevent="submitInvoice">
-      <h2>Bill From</h2>
+      <h2 class="fs-base fw-bold color-primary mt-4">Bill From</h2>
       <div class="form-control">
         <label for="address">Street Address</label>
         <input type="text" id="address" name="address" v-model.trim="street" />

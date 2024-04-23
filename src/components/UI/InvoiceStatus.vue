@@ -1,5 +1,5 @@
 <template>
-  <ul class="font-weight-bold p-0 mb-0">
+  <ul class="fw-bold p-0 mb-0">
     <li :class="['invoice-status', status ? invoiceStatusClass(status) : 'status']">
       {{ !status ? 'status' : capitalizeStatus(status) }}
     </li>
