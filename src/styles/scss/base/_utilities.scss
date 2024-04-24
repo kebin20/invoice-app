@@ -1,3 +1,11 @@
+$font-sizes: (10, 16, 20, 32);
+
+@each $size in $font-sizes {
+  .fs-#{$size}-px {
+    font-size: #{$size}px;
+  }
+}
+
 .fw-bold {
   font-weight: bold;
 }
