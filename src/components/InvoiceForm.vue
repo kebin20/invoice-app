@@ -1,7 +1,7 @@
 <template>
   <section>
     <form @submit.prevent="submitInvoice">
-      <h2 class="fs-base fw-bold color-primary mt-4">Bill From</h2>
+      <h2>Bill From</h2>
       <div class="form-control">
         <label for="address">Street Address</label>
         <input type="text" id="address" name="address" v-model.trim="street" />
@@ -163,4 +163,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $color-primary;
+  margin-top: 1.5rem;
+}
+label {
+  color: $color-blue;
+}
+</style>
