@@ -1,82 +1,156 @@
 <template>
   <section>
     <form @submit.prevent="submitInvoice">
-      <h2>Bill From</h2>
-      <div class="form-control">
-        <label for="address">Street Address</label>
-        <input type="text" id="address" name="address" v-model.trim="street" />
-      </div>
-      <div class="form-control">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" v-model.trim="city" />
-      </div>
-      <div class="form-control">
-        <label for="postcode">Post Code</label>
-        <input type="text" id="postcode" name="postcode" v-model.trim="postCode" />
-      </div>
-      <div class="form-control">
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" v-model.trim="country" />
-      </div>
-
-      <h2>Bill To</h2>
-      <div class="form-control">
-        <label for="name">Client's Name</label>
-        <input type="text" id="name" name="name" v-model.trim="clientName" />
-      </div>
-      <div class="form-control">
-        <label for="client-address">Street Address</label>
-        <input type="text" id="client-address" name="client-address" v-model.trim="clientStreet" />
-      </div>
-      <div class="form-control">
-        <label for="client-city">City</label>
-        <input type="text" id="client-city" name="client-city" v-model.trim="clientCity" />
-      </div>
-      <div class="form-control">
-        <label for="client-postcode">Post Code</label>
-        <input
-          type="text"
-          id="client-postcode"
-          name="client-postcode"
-          v-model.trim="clientPostCode"
-        />
-      </div>
-      <div class="form-control">
-        <label for="client-country">Country</label>
-        <input type="text" id="client-country" name="client-country" v-model.trim="clientCountry" />
-      </div>
-      <div class="form-control">
-        <label for="invoice-date">Invoice Date</label>
-        <input type="date" name="invoice-date" id="invoice-date" v-model="invoiceDate" />
-      </div>
-      <div class="form-control">
-        <label for="payment-terms">Payment Terms</label>
-        <select name="payment-terms" id="payment-terms" v-model="paymentTerms">
-          <option value="30">Net 30 Days</option>
-        </select>
-      </div>
-      <div class="form-control">
-        <label for="project">Project Description</label>
-        <input type="text" id="project" name="project" v-model.trim="description" />
+      <div class="d-flex flex-column gap-2">
+        <h2>Bill From</h2>
+        <div>
+          <label for="address">Street Address</label>
+          <input
+            class="form-control"
+            type="text"
+            id="address"
+            name="address"
+            v-model.trim="street"
+          />
+        </div>
+        <div class="d-flex flex-row gap-4">
+          <div>
+            <label for="city">City</label>
+            <input class="form-control" type="text" id="city" name="city" v-model.trim="city" />
+          </div>
+          <div>
+            <label for="postcode">Post Code</label>
+            <input
+              class="form-control"
+              type="text"
+              id="postcode"
+              name="postcode"
+              v-model.trim="postCode"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <input
+            class="form-control"
+            type="text"
+            id="country"
+            name="country"
+            v-model.trim="country"
+          />
+        </div>
       </div>
 
-      <section>
-        <h2>Item List</h2>
-        <div class="form-control">
+      <div class="d-flex flex-column gap-2 mt-2">
+        <h2>Bill To</h2>
+        <div>
+          <label for="name">Client's Name</label>
+          <input class="form-control" type="text" id="name" name="name" v-model.trim="clientName" />
+        </div>
+        <div>
+          <label for="client-address">Street Address</label>
+          <input
+            class="form-control"
+            type="text"
+            id="client-address"
+            name="client-address"
+            v-model.trim="clientStreet"
+          />
+        </div>
+        <div class="d-flex flex-row gap-4">
+          <div>
+            <label for="client-city">City</label>
+            <input
+              class="form-control"
+              type="text"
+              id="client-city"
+              name="client-city"
+              v-model.trim="clientCity"
+            />
+          </div>
+          <div>
+            <label for="client-postcode">Post Code</label>
+            <input
+              class="form-control"
+              type="text"
+              id="client-postcode"
+              name="client-postcode"
+              v-model.trim="clientPostCode"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="client-country">Country</label>
+          <input
+            class="form-control"
+            type="text"
+            id="client-country"
+            name="client-country"
+            v-model.trim="clientCountry"
+          />
+        </div>
+        <div class="mt-2">
+          <label for="invoice-date">Invoice Date</label>
+          <input
+            class="form-control"
+            type="date"
+            name="invoice-date"
+            id="invoice-date"
+            v-model="invoiceDate"
+          />
+        </div>
+        <div>
+          <label for="payment-terms">Payment Terms</label>
+          <select
+            class="form-control"
+            name="payment-terms"
+            id="payment-terms"
+            v-model="paymentTerms"
+          >
+            <option value="30">Net 30 Days</option>
+          </select>
+        </div>
+        <div>
+          <label for="project">Project Description</label>
+          <input
+            class="form-control"
+            type="text"
+            id="project"
+            name="project"
+            v-model.trim="description"
+          />
+        </div>
+      </div>
+
+      <section class="item-list">
+        <h2 class="color-blue fs-20-px mb-4">Item List</h2>
+        <div>
           <label for="item-name">Item Name</label>
-          <input type="text" id="item-name" name="item-name" v-model.trim="itemName" />
+          <input
+            class="form-control"
+            type="text"
+            id="item-name"
+            name="item-name"
+            v-model.trim="itemName"
+          />
         </div>
-        <div class="form-control">
+        <div>
           <label for="quantity">Qty.</label>
-          <input type="number" id="quantity" name="quantity" v-model="itemQuantity" />
+          <input
+            class="form-control"
+            type="number"
+            id="quantity"
+            name="quantity"
+            v-model="itemQuantity"
+          />
         </div>
-        <div class="form-control">
+        <div>
           <label for="price">Price</label>
-          <input type="number" id="price" name="price" v-model="itemPrice" />
+          <input class="form-control" type="number" id="price" name="price" v-model="itemPrice" />
         </div>
-        <div class="form-control">
+        <div>
           <label for="total">Total</label>
-          <input type="number" id="total" name="total" v-model="itemTotal" />
+          <input class="form-control" type="number" id="total" name="total" v-model="itemTotal" />
         </div>
         <button type="button" @click="removeItemFromList">Remove Item</button>
       </section>
@@ -171,6 +245,18 @@ h2 {
   margin-top: 1.5rem;
 }
 label {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
   color: $color-blue;
+}
+input[type='text'] {
+  font-weight: bold;
+}
+.form-control {
+  border-radius: 4px;
+}
+
+.item-list {
+  margin-top: 5em;
 }
 </style>
