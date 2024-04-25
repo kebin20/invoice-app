@@ -134,25 +134,27 @@
             v-model.trim="itemName"
           />
         </div>
-        <div>
-          <label for="quantity">Qty.</label>
-          <input
-            class="form-control"
-            type="number"
-            id="quantity"
-            name="quantity"
-            v-model="itemQuantity"
-          />
+        <div class="d-flex gap-4">
+          <div>
+            <label for="quantity">Qty.</label>
+            <input
+              class="form-control"
+              type="number"
+              id="quantity"
+              name="quantity"
+              v-model="itemQuantity"
+            />
+          </div>
+          <div>
+            <label for="price">Price</label>
+            <input class="form-control" type="number" id="price" name="price" v-model="itemPrice" />
+          </div>
+          <div>
+            <label for="total">Total</label>
+            <input class="form-control" type="number" id="total" name="total" v-model="itemTotal" />
+          </div>
+          <button type="button" @click="removeItemFromList">Remove Item</button>
         </div>
-        <div>
-          <label for="price">Price</label>
-          <input class="form-control" type="number" id="price" name="price" v-model="itemPrice" />
-        </div>
-        <div>
-          <label for="total">Total</label>
-          <input class="form-control" type="number" id="total" name="total" v-model="itemTotal" />
-        </div>
-        <button type="button" @click="removeItemFromList">Remove Item</button>
       </section>
       <button type="button" @click="addItemToList">Add Item</button>
       <p v-if="invalidInput">
