@@ -4,6 +4,10 @@
     <button class="btn bg-color-error text-white">Delete</button>
     <button class="btn bg-color-primary text-white">Mark as Paid</button>
   </section>
+  <section v-if="isItemList">
+    <button>Cancel</button>
+    <button>Save Changes</button>
+  </section>
 </template>
 
 <script>
