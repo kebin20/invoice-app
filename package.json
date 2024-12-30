@@ -28,7 +28,7 @@
     "@vitejs/plugin-vue-jsx": "^4.1.1",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/test-utils": "^2.4.6",
-    "cypress": "^13.6.6",
+    "cypress": "^13.17.0",
     "eslint": "^8.49.0",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-vue": "^9.17.0",
