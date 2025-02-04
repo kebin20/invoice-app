@@ -1,5 +1,6 @@
-@import 'base/variables';
-@import 'base/typography';
-@import 'base/colors';
-@import 'base/utilities';
-@import 'base/buttons'
+@use '@/assets/styles/variables'
+@use 'base/variables'
+@use 'base/typography'
+@use 'base/colors'
+@use 'base/utilities'
+@use 'base/buttons'

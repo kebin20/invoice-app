@@ -1,29 +1,17 @@
-// nuxt.config.ts
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
-  css: ['@/assets/styles/main.scss'], 
-  modules: [],
+  css: ['@/src/styles/scss/global.scss'],
+
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/assets/styles/variables.scss";` 
+          additionalData: `@import "@/assets/styles/variables.scss";`
         }
       }
     }
-  }
+  },
+
+  compatibilityDate: '2025-02-04'
 })
-function defineNuxtConfig(config: {
-    css: string[];
-    modules: any[];
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: string;
-                };
-            };
-        };
-    };
-}) {
-    return config;
-}
