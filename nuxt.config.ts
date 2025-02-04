@@ -1,7 +1,7 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  css: ['@/assets/styles/main.scss'],
+  css: ['@/src/styles/scss/global.scss'],
 
   vite: {
     css: {
@@ -11,5 +11,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  compatibilityDate: '2025-02-04'
 })
